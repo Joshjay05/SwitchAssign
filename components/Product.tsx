@@ -74,13 +74,13 @@ const ProductList: React.FC = () => {
         {filteredProducts.map(product => (
           <div 
             key={product.id} 
-            className="border rounded-lg overflow-hidden cursor-pointer"
+            className="border rounded-lg overflow-hidden cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg py-[20px]"
             onClick={() => handleProductClick(product.id)}
           >
             <img src={product.thumbnail} alt={product.title} className="w-full h-48 object-cover" />
             <div className="p-4">
-              <h2 className="text-lg font-semibold">{product.title}</h2>
-              <p className="text-blue-600 font-bold">${product.price}</p>
+              <h2 className="text-lg font-semibold mb-2">{product.title}</h2>
+              <p className="text-blue-600 font-bold mb-2">${product.price}</p>
               {/* <button
                 onClick={(e) => {
                   e.stopPropagation();
@@ -88,8 +88,8 @@ const ProductList: React.FC = () => {
                 }}
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
               >
-                Add to Cart */}
-              {/* </button> */}
+                Add to Cart
+              </button> */}
             </div>
           </div>
         ))}
