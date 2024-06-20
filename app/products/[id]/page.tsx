@@ -35,7 +35,7 @@ console.log(params)
   return (
     <div className="p-6 flex flex-col items-center">
       <div className="w-full max-w-3xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[8rem]">
           <img src={product.thumbnail} alt={product.title} className="w-full  object-cover rounded-lg mb-4" />
           <div>
             <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
