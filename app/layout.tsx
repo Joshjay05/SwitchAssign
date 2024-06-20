@@ -1,3 +1,4 @@
+import StoreProvider from "./StoreProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -17,8 +18,10 @@ export default function RootLayout({
 
 			<link rel="icon" href="/logo.jpg" />
 			<body>
-		
+		<StoreProvider>
+
 				<main className="relative overflow-hidden">{children}</main>
+    </StoreProvider>
 			
 			</body>
 		</html>

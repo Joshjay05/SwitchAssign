@@ -11,10 +11,12 @@ export interface Product {
     thumbnail: string;
     images?: string[];
     weight: number;
+    quantity: number;
     dimensions: {
       width: number;
       height: number;
       depth: number;
+
     };
     warrantyInformation: string;
     shippingInformation: string;
@@ -38,3 +40,6 @@ export interface Product {
     sku: string;
   }
   
+  export interface CartProduct extends Product {
+    quantity: number;
+  }
